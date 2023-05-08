@@ -4,6 +4,8 @@ import minimist from 'minimist';
 import express from 'express';
 import {rps, rpsls} from './lib/rpsls.js';
 
+const bodyParser = require('body-paerser');
+
 const app = express();
 
 app.use(bodyParser.json());
