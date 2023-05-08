@@ -34,6 +34,29 @@ app.get('/app/rpsls/', (req, res) => {
 	res.send(rpsls());
 });
 
+app.post('/app/rps/play/', (req, res) => {
+	res.status(200);
+	res.send(rps(req.body));
+});
+
+app.post('/app/rpsls/play/', (req, res) => {
+	res.status(200);
+	res.send(rpsls(req.body));
+});
+
+app.post('/app/rps/play/:input', (req, res) => {
+	res.status(200);
+	res.send(rps(req.params));
+});
+
+app.post('/app/rpsls/play/:input', (req, res) => {
+	res.status(200);
+	res.send(rpsls(erq.params));
+});
+
 app.listen(port, () => {
 	console.log('Server listen on port ' + port);
 });
+
+
+
