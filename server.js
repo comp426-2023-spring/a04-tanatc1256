@@ -2,7 +2,7 @@
 
 import minimist from 'minimist';
 import express from 'express';
-import {rps, rps;s} from './lib/rpsls.js';
+import {rps, rpsls} from './lib/rpsls.js';
 
 const app = express();
 
