@@ -24,6 +24,16 @@ app.get('*', function(req, res) {
 	res.send('404 NOT FOUND');
 });
 
+app.get('/app/rps/', (req, res) => {
+	res.status(200);
+	res.send(rps());
+});
+
+app.get('/app/rpsls/', (req, res) => {
+	res.status(200);
+	res.send(rpsls));
+});
+
 app.listen(port, () => {
 	console.log('Server listen on port ' + port);
 });
