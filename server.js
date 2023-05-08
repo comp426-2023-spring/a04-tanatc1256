@@ -51,7 +51,7 @@ app.post('/app/rps/play/:input', (req, res) => {
 
 app.post('/app/rpsls/play/:input', (req, res) => {
 	res.status(200);
-	res.send(rpsls(erq.params.input));
+	res.send(rpsls(req.params.input));
 });
 
 app.listen(port, () => {
