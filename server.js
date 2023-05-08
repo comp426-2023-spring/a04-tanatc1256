@@ -46,12 +46,12 @@ app.post('/app/rpsls/play/', (req, res) => {
 
 app.post('/app/rps/play/:input', (req, res) => {
 	res.status(200);
-	res.send(rps(req.params));
+	res.send(rps(req.params.input));
 });
 
 app.post('/app/rpsls/play/:input', (req, res) => {
 	res.status(200);
-	res.send(rpsls(erq.params));
+	res.send(rpsls(erq.params.input));
 });
 
 app.listen(port, () => {
