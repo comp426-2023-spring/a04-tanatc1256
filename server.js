@@ -31,7 +31,7 @@ app.get('/app/rps/', (req, res) => {
 
 app.get('/app/rpsls/', (req, res) => {
 	res.status(200);
-	res.send(rpsls));
+	res.send(rpsls());
 });
 
 app.listen(port, () => {
