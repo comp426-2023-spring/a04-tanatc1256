@@ -23,3 +23,7 @@ app.get('*', function(req, res) {
 	res.status(404);
 	res.send('404 NOT FOUND');
 });
+
+app.listen(port, () => {
+	console.log('Server listen on port ' + port);
+});
