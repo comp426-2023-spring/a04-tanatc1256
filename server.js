@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-const agrs = minimist(process.argv.slice(2));
+const args = minimist(process.argv.slice(2));
 
 const port = args.port || 5000;
 
