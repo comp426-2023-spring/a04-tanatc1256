@@ -3,8 +3,7 @@
 import minimist from 'minimist';
 import express from 'express';
 import {rps, rpsls} from './lib/rpsls.js';
-
-const bodyParser = require('body-paerser');
+import bodyParser from 'body-parser';
 
 const app = express();
 
@@ -20,4 +19,7 @@ app.get('/app/', (req, res) => {
 	res.send('200 OK');
 });
 
-
+app.get('*', function(req, res) {
+	res.status(404);
+	res.send('404 NOT FOUND');
+});
